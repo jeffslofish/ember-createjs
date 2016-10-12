@@ -1,27 +1,16 @@
-# Ember-createjs
+# ember-createjs
 
-This README outlines the details of collaborating on this Ember addon.
+[createjs](http://www.createjs.com/) for Ember.
 
-## Installation
+## installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-createjs`
-* `npm install`
-* `bower install`
+`ember install ember-createjs`
 
-## Running
+## usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```js
+import createjs from 'ember-createjs';
 
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+createjs.Sound;
+createjs.LoadQueue;
+```
