@@ -31,7 +31,7 @@
 // version.js
 //##############################################################################
 
-const createjs = {};
+this.createjs = this.createjs || {};
 
 (function () {
 
@@ -65,7 +65,7 @@ const createjs = {};
 // extend.js
 //##############################################################################
 
-
+this.createjs = this.createjs||{};
 
 /**
  * @class Utility Methods
@@ -101,7 +101,7 @@ createjs.extend = function(subclass, superclass) {
 // promote.js
 //##############################################################################
 
-
+this.createjs = this.createjs||{};
 
 /**
  * @class Utility Methods
@@ -161,7 +161,7 @@ createjs.promote = function(subclass, prefix) {
 // IndexOf.js
 //##############################################################################
 
-
+this.createjs = this.createjs||{};
 
 /**
  * @class Utility Methods
@@ -193,7 +193,7 @@ createjs.indexOf = function (array, searchElement){
 // Proxy.js
 //##############################################################################
 
-
+this.createjs = this.createjs||{};
 
 /**
  * Various utilities that the CreateJS Suite uses. Utilities are created as separate files, and will be available on the
@@ -245,7 +245,7 @@ createjs.indexOf = function (array, searchElement){
 // BrowserDetect.js
 //##############################################################################
 
-
+this.createjs = this.createjs||{};
 
 /**
  * @class Utility Methods
@@ -296,7 +296,7 @@ createjs.indexOf = function (array, searchElement){
 // EventDispatcher.js
 //##############################################################################
 
-
+this.createjs = this.createjs||{};
 
 (function() {
 	"use strict";
@@ -692,7 +692,7 @@ createjs.indexOf = function (array, searchElement){
 // Event.js
 //##############################################################################
 
-
+this.createjs = this.createjs||{};
 
 (function() {
 	"use strict";
@@ -919,7 +919,7 @@ createjs.indexOf = function (array, searchElement){
 // ErrorEvent.js
 //##############################################################################
 
-
+this.createjs = this.createjs||{};
 
 (function() {
 	"use strict";
@@ -971,7 +971,7 @@ createjs.indexOf = function (array, searchElement){
 // ProgressEvent.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function (scope) {
 	"use strict";
@@ -1032,7 +1032,7 @@ createjs.indexOf = function (array, searchElement){
 // LoadItem.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -1527,7 +1527,7 @@ createjs.indexOf = function (array, searchElement){
 // AbstractLoader.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -2257,7 +2257,7 @@ createjs.indexOf = function (array, searchElement){
 // AbstractMediaLoader.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -2359,7 +2359,7 @@ createjs.indexOf = function (array, searchElement){
 // AbstractRequest.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -2405,7 +2405,7 @@ createjs.indexOf = function (array, searchElement){
 // TagRequest.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -2592,7 +2592,7 @@ createjs.indexOf = function (array, searchElement){
 // MediaTagRequest.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -2684,7 +2684,7 @@ createjs.indexOf = function (array, searchElement){
 // XHRRequest.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -3218,7 +3218,7 @@ createjs.indexOf = function (array, searchElement){
 // SoundLoader.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -3357,7 +3357,7 @@ createjs.indexOf = function (array, searchElement){
 // PlayPropsConfig.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -3515,7 +3515,7 @@ createjs.indexOf = function (array, searchElement){
 // Sound.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 
 
@@ -5295,7 +5295,7 @@ createjs.indexOf = function (array, searchElement){
 // AbstractSoundInstance.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 /**
  * A AbstractSoundInstance is created when any calls to the Sound API method {{#crossLink "Sound/play"}}{{/crossLink}} or
@@ -6202,7 +6202,7 @@ createjs.indexOf = function (array, searchElement){
 // AbstractPlugin.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -6498,7 +6498,7 @@ createjs.indexOf = function (array, searchElement){
 // WebAudioLoader.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -6569,7 +6569,7 @@ createjs.indexOf = function (array, searchElement){
 // WebAudioSoundInstance.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 /**
  * WebAudioSoundInstance extends the base api of {{#crossLink "AbstractSoundInstance"}}{{/crossLink}} and is used by
@@ -6880,7 +6880,7 @@ createjs.indexOf = function (array, searchElement){
 // WebAudioPlugin.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 
@@ -7267,7 +7267,7 @@ createjs.indexOf = function (array, searchElement){
 // HTMLAudioTagPool.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -7466,7 +7466,7 @@ createjs.indexOf = function (array, searchElement){
 // HTMLAudioSoundInstance.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 	"use strict";
@@ -7714,7 +7714,7 @@ createjs.indexOf = function (array, searchElement){
 // HTMLAudioPlugin.js
 //##############################################################################
 
-
+this.createjs = this.createjs || {};
 
 (function () {
 
@@ -7947,5 +7947,3 @@ createjs.indexOf = function (array, searchElement){
 
 	createjs.HTMLAudioPlugin = createjs.promote(HTMLAudioPlugin, "AbstractPlugin");
 }());
-
-export default createjs;
