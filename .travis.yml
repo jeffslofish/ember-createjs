@@ -1,36 +1,41 @@
+---
 language: node_js
 node_js:
-- '4'
+  # we recommend testing addons with the same minimum supported node version as Ember CLI
+  # so that your addon works for all apps
+  - "4"
+
 sudo: false
+dist: trusty
+
+addons:
+  chrome: stable
+
 cache:
   directories:
-  - node_modules
+    - $HOME/.npm
+
 env:
-- EMBER_TRY_SCENARIO=default
-- EMBER_TRY_SCENARIO=ember-1.13
-- EMBER_TRY_SCENARIO=ember-release
-- EMBER_TRY_SCENARIO=ember-beta
-- EMBER_TRY_SCENARIO=ember-canary
+  # we recommend new addons test the current and previous LTS
+  # as well as latest stable release (bonus points to beta/canary)
+  - EMBER_TRY_SCENARIO=ember-lts-2.8
+  - EMBER_TRY_SCENARIO=ember-lts-2.12
+  - EMBER_TRY_SCENARIO=ember-release
+  - EMBER_TRY_SCENARIO=ember-beta
+  - EMBER_TRY_SCENARIO=ember-canary
+  - EMBER_TRY_SCENARIO=ember-default
+
 matrix:
   fast_finish: true
   allow_failures:
-  - env: EMBER_TRY_SCENARIO=ember-canary
+    - env: EMBER_TRY_SCENARIO=ember-canary
+
 before_install:
-- npm config set spin false
-- npm install -g bower
-- bower --version
-- npm install phantomjs-prebuilt
-- node_modules/phantomjs-prebuilt/bin/phantomjs --version
-install:
-- npm install
-- bower install
+  - npm config set spin false
+  - npm install -g npm@4
+  - npm --version
+
 script:
-- ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
-deploy:
-  provider: npm
-  email: null@affinitygamescollective.org
-  api_key:
-    secure: N1813mgJ2F65hrwKZlZ7UkIqbh8JTyb2xNyfRJtFkXxKKUzGffQ+jGE5rGhkjyEmZevdxgVDtAs8ti84cHYD7K9yXvxMaAkQH6+FPAeIO4E+N+52FJY8UwOc38id7tzEDz2fGmvLIibzzq7lYhZn4iJfTX2HdbaqvAQFdS70zG1NkqGCt5cvxpXI5fXAOvb7MlPSRjBUiLDLQ+v7McLdxYDbvL+aufM4/waOJrETiTvCTdc4pN31vYScWJZGPCM4nZfWZRg5En4DVJ6/VAIlDd6tj/6GxHK9eGH2C8SNPMuym2Z10yKLxWFRqbDruEAhiJ/MX/MgrYvVR1/VQYgycTlPXjN5ne0trd5WJsS5ERHKCZ5SaKN7xM5Ca4c8m3JZwa5lz+VTK6L8LA95rlJNCRq9FbCAuFoNIyVuLmDgiQIyf5emqjGdp5IJ8H5kNimNYyRkBDPbqYtjskY9JapuPh5+rsBjDndUbzAt0jtbqRXLYu3S5PWRILRPEHTjZ85dwshnv+y04CXikag8R8/6+wzrUWK03XsLvEog6y4TbX7T97uk+CpzCM1331LM3ejlEGPMmA9D7xfiZcSXCyDmvE/+xtdx0IpYZSPx4OacZqMOLfxidI04OxHd0iX9hQxbCMOKyZtfM3A52qqdiGRNlB2FjRgUhr0dXektk4Z/EMQ=
-  on:
-    tags: true
-    repo: null-null-null/ember-createjs
+  # Usually, it's ok to finish the test scenario without reverting
+  #  to the addon's original dependency state, skipping "cleanup".
+  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
