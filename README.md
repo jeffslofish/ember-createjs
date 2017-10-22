@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/ember-createjs.svg)](https://badge.fury.io/js/ember-createjs)
-[![Build Status](https://travis-ci.org/null-null-null/ember-createjs.svg?branch=master)](https://travis-ci.org/null-null-null/ember-createjs)
+[![Build Status](https://travis-ci.org/patience-tema-baron/ember-createjs.svg?branch=master)](https://travis-ci.org/patience-tema-baron/ember-createjs)
 
 # ember-createjs
 
